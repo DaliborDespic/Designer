@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap');
+
+$gray: #333333;
+$darkgray: #2e2e2e;
+$yellow: #f3cd52;
+$lightgray: rgba(255, 255, 255, 0.4);
+$white: #fff;
+$transition: .4s ease;
+
+// basic styles
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pontano Sans', sans-serif;
+    background: $gray;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    @media (max-width: 767px){
+       width: 95%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: $lightgray;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    width: 100%;
+    background: $lightgray;
+    margin: 40px auto;
+}
+// mixins
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin btn {
+    text-transform: uppercase;
+    color: $darkgray;
+    padding: 10px 30px;
+    background: $yellow;
+    border: none;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+        background: $lightgray;
+        color: $yellow;
+    }
+}
+
+// header
+header {
+    background: $yellow;
+
+    .container {
+        text-align: center;
+        img {
+            width: 100%;
+            display: block;
+            border: 20px solid $lightgray;
+            border-width: 20px 20px 0 20px;
+        }
+
+        ul {
+            @include flex(center, center, row);
+            li {
+                padding: 20px 40px;
+                @media (max-width: 767px){
+                    padding: 5px;
+                    font-size: 1rem;
+                }
+    
+                a {
+                    text-transform: uppercase;
+                    color: $gray;
+                    transition: $transition;
+
+                    &:hover {
+                        border-bottom: 1px solid $gray;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            letter-spacing: 3px;
+            margin: 20px 0 10px 0;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+    }
+
+}
+
+// skills
+.skills {
+    @include flex(space-between, center, row);
+
+    div {
+        flex: 0 0 28%;
+        margin: 50px auto;
+        text-align: center;
+        @media (max-width: 767px){
+            flex: 100%;
+        }
+        p {
+            margin: 20px 0;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+
+// portfolio
+.portfolio {
+    text-align: center;
+    margin: 50px auto;
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        margin: 20px 0 40px;
+    }
+    .row {
+        @include flex(space-between, center, row);
+        div {
+            flex: 0 0 23%;
+            @media (max-width: 767px){
+                flex: 100%;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+            }
+            button {
+                @include btn;
+            }
+        }
+
+    }
+}
+
+// contact
+.contact {
+    text-align: center;
+    margin: 30px auto;
+    form {
+        width: 40%;
+        margin:auto;
+        @media (max-width: 767px){
+          width: 90%;      
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            border: none;
+            background: $darkgray;
+            padding: 10px;  
+        }
+        input::placeholder, textarea::placeholder {
+            font-family: 'Pontano Sans', sans-serif;
+        }
+    }
+     button {
+        @include btn;
+     }   
+}
+
+footer {
+    text-align: center;
+    h2 {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+    p {
+        margin: 30px 0;
+    }
+    .icons {
+        a {
+            color: $yellow;
+            font-size: 2rem;
+            padding: 0 20px;
+            transition: $transition;
+            &:hover {
+                color: $lightgray;
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pontano Sans", sans-serif;
+  background: #333333;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+hr {
+  border: none;
+  height: 2px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 40px auto;
+}
+
+header {
+  background: #f3cd52;
+}
+header .container {
+  text-align: center;
+}
+header .container img {
+  width: 100%;
+  display: block;
+  border: 20px solid rgba(255, 255, 255, 0.4);
+  border-width: 20px 20px 0 20px;
+}
+header .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header .container ul li {
+  padding: 20px 40px;
+}
+@media (max-width: 767px) {
+  header .container ul li {
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
+header .container ul li a {
+  text-transform: uppercase;
+  color: #333333;
+  transition: 0.4s ease;
+}
+header .container ul li a:hover {
+  border-bottom: 1px solid #333333;
+}
+header .container h1 {
+  letter-spacing: 3px;
+  margin: 20px 0 10px 0;
+}
+header .container h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.skills div {
+  flex: 0 0 28%;
+  margin: 50px auto;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .skills div {
+    flex: 100%;
+  }
+}
+.skills div p {
+  margin: 20px 0;
+}
+.skills div button {
+  text-transform: uppercase;
+  color: #2e2e2e;
+  padding: 10px 30px;
+  background: #f3cd52;
+  border: none;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.skills div button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #f3cd52;
+}
+
+.portfolio {
+  text-align: center;
+  margin: 50px auto;
+}
+.portfolio h2 {
+  font-size: 2rem;
+}
+.portfolio p {
+  margin: 20px 0 40px;
+}
+.portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.portfolio .row div {
+  flex: 0 0 23%;
+}
+@media (max-width: 767px) {
+  .portfolio .row div {
+    flex: 100%;
+    margin-bottom: 20px;
+  }
+}
+.portfolio .row div img {
+  width: 100%;
+}
+.portfolio .row div button {
+  text-transform: uppercase;
+  color: #2e2e2e;
+  padding: 10px 30px;
+  background: #f3cd52;
+  border: none;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.portfolio .row div button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #f3cd52;
+}
+
+.contact {
+  text-align: center;
+  margin: 30px auto;
+}
+.contact form {
+  width: 40%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .contact form {
+    width: 90%;
+  }
+}
+.contact form input, .contact form textarea {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  border: none;
+  background: #2e2e2e;
+  padding: 10px;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-family: "Pontano Sans", sans-serif;
+}
+.contact button {
+  text-transform: uppercase;
+  color: #2e2e2e;
+  padding: 10px 30px;
+  background: #f3cd52;
+  border: none;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.contact button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #f3cd52;
+}
+
+footer {
+  text-align: center;
+}
+footer h2 {
+  font-size: 2rem;
+  margin-top: 50px;
+}
+footer p {
+  margin: 30px 0;
+}
+footer .icons a {
+  color: #f3cd52;
+  font-size: 2rem;
+  padding: 0 20px;
+  transition: 0.4s ease;
+}
+footer .icons a:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/*# sourceMappingURL=style.css.map */
